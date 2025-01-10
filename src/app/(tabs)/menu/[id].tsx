@@ -1,7 +1,7 @@
 import { Stack, useLocalSearchParams } from "expo-router";
 import { View, Text, Image, StyleSheet, Pressable } from "react-native";
 import products from "@/assets/data/products";
-import { defaultPizzaImage } from "@/src/components/ProductListItem";
+import { defaultPizzaImage } from "@components/ProductListItem";
 import { useState } from "react";
 import { Button } from "@components/Button";
 
