@@ -2,8 +2,6 @@ import React from "react";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { Tabs } from "expo-router";
 import Colors from "@/src/constants/Colors";
-import { useColorScheme } from "@/src/components/useColorScheme";
-import { useClientOnlyValue } from "@/src/components/useClientOnlyValue";
 
 // You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
 function TabBarIcon(props: {
@@ -14,10 +12,6 @@ function TabBarIcon(props: {
 }
 
 export default function AdminLayout() {
-  const colorScheme = useColorScheme();
-
-  console.log({ colorScheme });
-
   return (
     <Tabs
       screenOptions={{
@@ -40,9 +34,10 @@ export default function AdminLayout() {
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="orders"
         options={{
           title: "Orders",
+          headerShown: false,
           tabBarIcon: ({ color }) => <TabBarIcon name="list" color={color} />,
         }}
       />
